@@ -17,7 +17,7 @@ from event.api.serializers import EventPostCreateSerializer,EventPostSerializer
 from event.models import EventPost
 from event.api.utils import is_time_between
 
-
+# Event Create 
 @api_view(['POST',])
 @permission_classes((IsAuthenticated,))
 def api_event_create_view(request):
@@ -86,7 +86,7 @@ def api_event_invite_view(request, slug):
         return Response({'response':"You don't have permission to delete that."})
 
     if request.method == 'POST':
-        print(request.POST.get('username'))
+        # print(request.POST.get('username'))
         invite_user=Account.objects.filter(username = request.POST.get('username')).first()
         data={}
         if invite_user:

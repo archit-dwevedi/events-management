@@ -22,5 +22,4 @@ urlpatterns = [
 	path('properties/update', update_account_view, name="update"),
  	path('login', ObtainAuthTokenView.as_view(), name="login"), 
 	path('register', registration_view, name="register"),
-
 ]

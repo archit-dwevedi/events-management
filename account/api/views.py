@@ -19,6 +19,14 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
+
+
+
+@api_view(['GET', ])
+def index(request):
+	return Response({"response": "Hey There ! Let's Dive into REST API"})
+
+
 # Register
 @api_view(['POST', ])
 @permission_classes([])
