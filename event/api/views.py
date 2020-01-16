@@ -113,17 +113,20 @@ def api_event_accept_invite_view(request):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
-        if (request.user in event_post.invited_user.all()) or (event_post.private == False):
-            attending_events = EventPost.objects.filter(attending_users = request.user)
-            for event in attending_events:
-                if is_time_between(event.start_time, event.end_time, event_post.start_time) or is_time_between(event.start_time, event.end_time, event_post.end_time):
-                    return Response({"response": "You have already Scheduled Events in this time !"})
-            event_post.attending_users.add(request.user)
-            event_post.save()
-            return Response({"response":"Success"})
+        if (event_post.attending_users.all().count<event_post.attendees):
+            if ((event_post.private == False) or (request.user in event_post.invited_user.all())):
+                attending_events = EventPost.objects.filter(attending_users = request.user)
+                for event in attending_events:
+                    if is_time_between(event.start_time, event.end_time, event_post.start_time) or is_time_between(event.start_time, event.end_time, event_post.end_time):
+                        return Response({"response": "You have already Scheduled Events in this time !"})
+                
+                event_post.attending_users.add(request.user)
+                event_post.save()
+                return Response({"response":"Success"})
+            else:
+                return Response({"response": "You are not Invited !"})
         else:
-            return Response({"response": "You are not Invited !"})
+            return Response({"response": "Allowed Count of Attendees are full !"})
             
 
 
