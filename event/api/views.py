@@ -83,7 +83,7 @@ def api_event_invite_view(request, slug):
 
     user = request.user
     if event_post.organizer != user:
-        return Response({'response':"You don't have permission to delete that."})
+        return Response({'response':"You don't have permission to invite in this event."})
 
     if request.method == 'POST':
         # print(request.POST.get('username'))
@@ -113,7 +113,7 @@ def api_event_accept_invite_view(request):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-        if (event_post.attending_users.all().count<event_post.attendees):
+        if (event_post.attending_users.all().count()<event_post.attendees):
             if ((event_post.private == False) or (request.user in event_post.invited_user.all())):
                 attending_events = EventPost.objects.filter(attending_users = request.user)
                 for event in attending_events:
