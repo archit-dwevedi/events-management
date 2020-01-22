@@ -1,6 +1,6 @@
 # Event Registration - REST API
 
-[![GitHub license](https://img.shields.io/github/license/arch888/MiStay_REST?logo=github&)](https://github.com/arch888/MiStay_REST/blob/master/LICENSE)[![GitHub last commit](https://img.shields.io/github/last-commit/arch888/MiStay_REST?logo=github)](https://github.com/arch888/MiStay_REST/)![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/arch888/MiStay_REST?logo=snyk&color=green)
+[![GitHub license](https://img.shields.io/github/license/arch888/MiStay_REST?logo=github&)](https://github.com/arch888/MiStay_REST/blob/master/LICENSE)[![GitHub last commit](https://img.shields.io/github/last-commit/arch888/MiStay_REST?logo=github)](https://github.com/arch888/MiStay_REST/)[![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/arch888/MiStay_REST?logo=snyk&color=green)](https://github.com/arch888/MiStay_REST)
 
 
 
@@ -24,9 +24,7 @@ To **design Event Registration system REST API** with ability to do following ta
 
 ## Pre-Requisites
 
-[![GitHub top language](https://img.shields.io/github/languages/top/arch888/MiStay_REST?label=Python&logo=Python)](https://github.com/arch888/MiStay_REST/)[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/arch888/MiStay_REST?logo=github&color=teal)](https://github.com/arch888/MiStay_REST/)[![Issues](https://img.shields.io/github/issues/arch888/MiStay_REST)
-
-](https://github.com/arch888/MiStay_REST)
+[![GitHub top language](https://img.shields.io/github/languages/top/arch888/MiStay_REST?label=Python&logo=Python)](https://github.com/arch888/MiStay_REST/)[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/arch888/MiStay_REST?logo=github&color=teal)](https://github.com/arch888/MiStay_REST/)[![Issues](https://img.shields.io/github/issues/arch888/MiStay_REST)](https://github.com/arch888/MiStay_REST)
 
 The Source-Code for this project is written using Python. Make Sure you have [Python](https://www.python.org/) Installed on your PC. If you are using Windows/Mac please install from [here](https://www.python.org/downloads/).
 
